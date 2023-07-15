@@ -87,7 +87,7 @@ body {
 
 /* Type */
 body, input, select, textarea {
-  color: #f7fcff;
+  color: black;
   font-family: "Open Sans", sans-serif;
   font-size: 13pt;
   font-weight: 400;
