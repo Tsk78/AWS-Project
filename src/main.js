@@ -1,12 +1,14 @@
 // main.js
 import { createApp } from 'vue'
 import './style.css'
-import App from './App.vue'
-
+import App from './App.vue';
 import "vuetify/dist/vuetify.css";
 import { createVuetify } from "vuetify";
 import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
+
+// Import the router with the correct path
+import router from './plugins/router';
 
 const vuetify = createVuetify({
   components,
@@ -15,4 +17,5 @@ const vuetify = createVuetify({
 
 createApp(App)
   .use(vuetify)
+  .use(router)
   .mount('#app');
