@@ -1,6 +1,31 @@
-# Vue 3 + Vite
+# AWS Project - Farrer Park Hospital Freelance Nurse Website
 
-This template should help get us to start developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Project setup
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Compiles and hot-reloads for development
+
+```bash
+npm run dev
+```
+
+### Compiles and minifies for production
+
+```bash
+npm run build
+```
+
+### Lints and fixes files
+
+```bash
+npm run lint
+```
+## Project Structure
 
 ## Recommended IDE Setup
 
