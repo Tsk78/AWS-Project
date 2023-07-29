@@ -1,6 +1,6 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
-import hello from './components/hello.vue'
+import timeline from './components/timeline.vue'
 </script>
 
 <template>
@@ -13,7 +13,7 @@ import hello from './components/hello.vue'
     </a>
   </div>
   <HelloWorld msg="AWS Project Website" />
-  <hello/>
+  <timeline/>
 </template>
 
 <style scoped>

@@ -1,5 +1,5 @@
 <template>
-  <v-timeline direction="horizontal">
+  <v-timeline align="start">
     <v-timeline-item>
       <template v-slot:opposite>
         Opposite content
