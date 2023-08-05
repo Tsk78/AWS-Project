@@ -1,16 +1,17 @@
+<script setup>
+import { RouterLink } from 'vue-router';
+import HelloWorld from '../components/HelloWorld.vue'
+import timeline from '../components/timeline.vue'
+</script>
+
 <template>
-    <div :style="{ backgroundColor: bgColor }">
-      <!-- Your content goes here -->
-    </div>
-  </template>
-  
-  <script>
-  export default {
-    data() {
-      return {
-        bgColor: '#ff0000', // Set the initial background color here
-      };
-    },
-    // Add methods and other Vue.js component options here if needed
-  }
-  </script>
+  <div id="bruh">
+    <h1>Test</h1>
+  </div>
+</template>
+
+<style scoped>
+#bruh{
+  color: #A50832;
+}
+</style>
