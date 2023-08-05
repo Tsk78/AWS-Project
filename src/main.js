@@ -7,7 +7,7 @@ import { createVuetify } from "vuetify";
 import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
 
-// Import the router
+// Import the router with the correct path
 import router from './plugins/router';
 
 const vuetify = createVuetify({
