@@ -12,11 +12,8 @@ import timeline from '../components/timeline.vue'
         <a href="https://vuejs.org/" target="_blank">
         <img src="../assets/vue.svg" class="logo vue" alt="Vue logo" />
         </a>
-        <br>
-        <router-link to = "/LoginPage"> Go to LoginPage</router-link>
-        <router-view></router-view>
+        <v-btn> Login page  </v-btn>
     </div>
-  <HelloWorld msg="AWS Project Website" />
 </template>
 
 <style scoped>
