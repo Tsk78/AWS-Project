@@ -14,6 +14,7 @@ import timeline from '../components/timeline.vue'
         </a>
         <br>
         <router-link to = "/LoginPage"> Go to LoginPage</router-link>
+        <router-link to = "/"> </router-link>
         <router-view></router-view>
     </div>
   <HelloWorld msg="AWS Project Website" />
