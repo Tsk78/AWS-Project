@@ -1,6 +1,9 @@
 // pages/index.js
 import React, { useState } from 'react';
 import styles from '../styles/Home.module.css';
+import about from './about';
+import contact from './contact';
+
 
 const Home = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -12,7 +15,12 @@ const Home = () => {
   return (
     <div className={styles.homeContainer}>
       <div className={`${styles.sidebar} ${sidebarOpen ? styles.open : ''}`}>
-        {/* Sidebar content here */}
+      <a href="/about">
+          <div>About</div>
+        </a>
+        <a href="/contact">
+          <div>Contact</div>
+        </a>
       </div>
       <div className={styles.contentContainer}>
         <div className={styles.homeHeader}>
