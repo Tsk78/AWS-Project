@@ -1,23 +1,37 @@
 // Home.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import './Home.css';
 
 const Home = () => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
   return (
     <div className="home-container">
-      <div className="content-container">
-        <div className="home-header">
-          <div className="navbar">
-            <button className="login-button">Login</button>
-            <button className="signup-button">Sign Up</button>
-          </div>
+      <form className="register-form">
+        <h2>Register</h2>
+        <div className="form-group">
+          <label htmlFor="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
         </div>
-        <div className="home-content">
-          <h2>Welcome to the Nurse Freelance Website</h2>
-          <p>Find and apply for freelance nursing jobs.</p>
-          <p>Discover opportunities and connect with healthcare facilities.</p>
+        <div className="form-group">
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
         </div>
-      </div>
+        <div className="form-group">
+          <button type="submit">Sign Up</button>
+        </div>
+      </form>
     </div>
   );
 };
