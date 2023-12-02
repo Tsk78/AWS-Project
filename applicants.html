@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+  <header id="header">
+    <a href="index.html" class="logo"><strong>Farrer Park Hospital</strong></a>
+    <ul class="icons">
+      <li><a href="https://www.linkedin.com/company/farrerparkhospital" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+      <li><a href="https://www.facebook.com/farrerparkhospital" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+      <li><a href="https://www.instagram.com/farrerparkhospital" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+      <li><a href="https://www.youtube.com/channel/UCaDjD2W4967Wb38D0x7Fm_g?feature=hovercard" class="icon brands fa-youtube"><span class="label">Youtube</span></a></li>
+    </ul>
+  </header>
+  
+  <div class="dashboard">
+    <header>
+      <h1>Admin Dashboard</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#job1">Job 1</a></li>
+        <li><a href="#job2">Job 2</a></li>
+        <li><a href="#job3">Job 3</a></li>
+      </ul>
+    </nav>
+    <div class="buttons">
+      <button id="addJob">Add Job</button>
+      <button id="removeJob">Remove Job</button>
+    </div>
+    <main>
+      <section id="job1">
+        <h2 contenteditable="true">Job 1</h2>
+        <p contenteditable="true">Description: Job 1 involves providing critical care in a hospital setting. Salary: $70,000 per year.</p>
+        <div class="profile-card">
+          <img src="https://via.placeholder.com/100" alt="Nurse Avatar">
+          <div class="profile-card-info">
+            <h3>Emily Johnson</h3>
+            <p>Completion Rate: 92%</p>
+            <p>Experience: 7 years</p>
+            <p>Education: BSc in Nursing</p>
+            <button>Admit</button>
+          </div>
+        </div>
+        <div class="profile-card">
+          <img src="https://via.placeholder.com/100" alt="Nurse Avatar">
+          <div class="profile-card-info">
+            <h3>Jack Chan</h3>
+            <p>Completion Rate: 85%</p>
+            <p>Experience: 5 years</p>
+            <p>Education: BSc in Nursing</p>
+            <button>Admit</button>
+          </div>
+        </div>
+      </section>
+      <section id="job2">
+        <h2 contenteditable="true">Job 2</h2>
+        <p contenteditable="true">Description: Job 1 involves providing critical care in a hospital setting. Salary: $70,000 per year.</p>
+        <div class="profile-card">
+          <img src="https://via.placeholder.com/100" alt="Nurse Avatar">
+          <div class="profile-card-info">
+            <h3>Emily Johnson</h3>
+            <p>Completion Rate: 92%</p>
+            <p>Experience: 7 years</p>
+            <p>Education: BSc in Nursing</p>
+            <button>Admit</button>
+          </div>
+        </div>
+        <div class="profile-card">
+          <img src="https://via.placeholder.com/100" alt="Nurse Avatar">
+          <div class="profile-card-info">
+            <h3>Jack Chan</h3>
+            <p>Completion Rate: 85%</p>
+            <p>Experience: 5 years</p>
+            <p>Education: BSc in Nursing</p>
+            <button>Admit</button>
+          </div>
+        </div>
+      </section>
+      <section id="job3">
+        <h2 contenteditable="true">Job 3</h2>
+        <p contenteditable="true">Description: Job 1 involves providing critical care in a hospital setting. Salary: $70,000 per year.</p>
+        <div class="profile-card">
+          <img src="https://via.placeholder.com/100" alt="Nurse Avatar">
+          <div class="profile-card-info">
+            <h3>Emily Johnson</h3>
+            <p>Completion Rate: 92%</p>
+            <p>Experience: 7 years</p>
+            <p>Education: BSc in Nursing</p>
+            <button>Admit</button>
+          </div>
+        </div>
+        <div class="profile-card">
+          <img src="https://via.placeholder.com/100" alt="Nurse Avatar">
+          <div class="profile-card-info">
+            <h3>Jack Chan</h3>
+            <p>Completion Rate: 85%</p>
+            <p>Experience: 5 years</p>
+            <p>Education: BSc in Nursing</p>
+            <button>Admit</button>
+          </div>
+        </div>
+      </section>
+      <!-- Other job sections will be dynamically added -->
+    </main>
+    <footer>
+      <p>&copy; 2023 Admin Dashboard</p>
+    </footer>
+  </div>
+
+  <script>
+    // JavaScript code for handling interactions and dynamic behavior
+    const addJobButton = document.getElementById('addJob');
+    const removeJobButton = document.getElementById('removeJob');
+    let jobCount = 3; // Initial jobs count
+
+    addJobButton.addEventListener('click', () => {
+      jobCount++;
+      const newJob = document.createElement('li');
+      newJob.innerHTML = `<a href="#job${jobCount}">Job ${jobCount}</a>`;
+      document.querySelector('nav ul').appendChild(newJob);
+
+      const newSection = document.createElement('section');
+      newSection.id = `job${jobCount}`;
+      newSection.innerHTML = `
+        <h2 contenteditable="true">Job ${jobCount}</h2>
+        <p contenteditable="true">Description: New job description. Salary: $80,000 per year.</p>
+      `;
+      document.querySelector('main').appendChild(newSection);
+    });
+
+    removeJobButton.addEventListener('click', () => {
+      const lastJob = document.querySelector(`nav ul li:last-child`);
+      if (lastJob && jobCount > 3) {
+        lastJob.remove();
+      }
+
+      const lastSection = document.querySelector(`main section:last-child`);
+      if (lastSection && jobCount > 3) {
+        lastSection.remove();
+        jobCount--;
+      }
+    });
+  </script>
+</body>
+</html>
+
+<style>
+  /* CSS styles for the wrapper, sidebar, and dashboard */
+  .wrapper {
+      display: flex;
+    }
+
+    #sidebar {
+      width: 300px; /* Adjust the width as needed */
+      background-color: #343a40;
+      color: #ffffff;
+    }
+
+    .dashboard {
+      flex: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+  }
+
+  .dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    color: #343a40;
+    font-size: 32px;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+
+  nav ul li {
+    margin-right: 10px;
+  }
+
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #343a40;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    transition: background-color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    background-color: #e0e0e0;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+
+  button {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #343a40;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #e0e0e0;
+  }
+
+  main section {
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    font-size: 24px;
+    color: #343a40;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 20px;
+  }
+
+  .profile-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .profile-card img {
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+
+  .profile-card-info {
+    flex: 1;
+  }
+
+  .profile-card h3 {
+    font-size: 20px;
+    color: #343a40;
+    margin-bottom: 10px;
+  }
+
+  .profile-card p {
+    font-size: 16px;
+    color: #777;
+  }
+
+  footer {
+    text-align: center;
+    color: #777;
+    margin-top: 40px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+</style>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nurse Profile</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+    }
+
+    .profile-container {
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-picture {
+      border-radius: 50%;
+      max-width: 150px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .profile-info {
+      text-align: center;
+    }
+
+    .profile-info h1 {
+      margin-bottom: 0;
+    }
+
+    .profile-info p {
+      color: #666;
+    }
+
+    .profile-details {
+      margin-top: 20px;
+    }
+
+    .details-section {
+      margin-bottom: 20px;
+    }
+
+    .details-section h2 {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+    }
+
+    .details-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .details-list li {
+      margin-bottom: 5px;
+    }
+
+    .edit-field {
+      border: 1px solid #ccc;
+      padding: 5px;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Nurse Profile</h1>
+  </header>
+
+  <div class="profile-container">
+    <div class="profile-info">
+      <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-picture">
+      <h1 contenteditable="true">Nurse Name</h1>
+      <p>Completion Rate: <span contenteditable="true">95%</span></p>
+    </div>
+
+    <div class="profile-details">
+      <div class="details-section">
+        <h2>Experience / Work History</h2>
+        <ul class="details-list">
+          <li contenteditable="true">Registered Nurse at ABC Hospital (2018 - Present)</li>
+          <li contenteditable="true">Intern Nurse at XYZ Clinic (2017 - 2018)</li>
+        </ul>
+      </div>
+
+      <div class="details-section">
+        <h2>Education</h2>
+        <ul class="details-list">
+          <li contenteditable="true">Bachelor of Science in Nursing - University XYZ (2017)</li>
+        </ul>
+      </div>
+
+      <div class="details-section">
+        <h2>Skills and Specialization</h2>
+        <ul class="details-list">
+          <li contenteditable="true">Cardiac Nursing</li>
+          <li contenteditable="true">Pediatric Nursing</li>
+          <li contenteditable="true">Wound Care</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
